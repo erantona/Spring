@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.basic.reference.Banana" name="banana" p:length="95"/>
+
+
+    <bean class="com.basic.reference.Apple" name="apple" p:weight="158.5" p:banana-ref="banana">
+
+<!--        <property name="weight" value="158.5"/>-->
+<!--        -->
+<!--        <property name="banana">-->
+<!--            <ref bean="banana"/>-->
+<!--        </property>-->
+<!--        <property name="banana" ref="banana"/>-->
+    </bean>
+
+
+
+</beans>

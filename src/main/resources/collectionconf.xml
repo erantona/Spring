@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="emp" class="com.basic.collections.Employee">
+        <property name="name" value="Radhe Gupta" />
+        <property name="phones">
+            <!--            if you hv 1 value just do this-->
+            <value>9564871544</value>
+            <!--<list>-->
+            <!--    <value>9564871544</value>-->
+            <!--    <value>9564871543</value>-->
+            <!--    <value>9564871542</value>-->
+            <!--    <null/>-->
+            <!--</list>-->
+        </property>
+        <property name="address">
+            <set>
+                <value>Sector 5</value>
+                <value>Garia</value>
+                <value>Moyna</value>
+            </set>
+        </property>
+        <property name="training">
+            <map>
+                <entry key="Java" value="2 months"/>
+                <entry key="Spring" value="6 months"/>
+                <entry key="react.js" value="3 months"/>
+
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="Skill">Java Dev</prop>
+                <prop key="Role">Project Manager</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

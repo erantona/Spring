@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.basic.constructor.Certificate" name="certificate" c:name="Spring Boot I,m Coming." />
+
+    <bean class="com.basic.constructor.Person" name="person" c:personId="1" c:personName="Sonu Sudh" c:certificate-ref="certificate">
+        <constructor-arg>
+            <list>
+                <value>Kolkata</value>
+                <value>Howrah</value>
+                <value>Haldia</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+
+<!--    <bean class="Person" name="person">-->
+<!--        <constructor-arg index="0" value="Durga Sen"/>-->
+<!--        <constructor-arg index="1" value="05"/>-->
+<!--        <constructor-arg ref="certificate" />-->
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <value>Kolkata</value>-->
+<!--                <value>Howrah</value>-->
+<!--                <value>Haldia</value>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+
+
+
+</beans>
